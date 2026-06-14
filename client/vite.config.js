@@ -9,12 +9,13 @@ export default defineConfig({
     https: true,
     proxy: {
       "/api": {
-        target: "http://10.180.20.174:5000",
+        target: "http://localhost:5000",
         changeOrigin: true,
       },
       "/socket.io": {
-        target: "http://10.180.20.174:5000",
+        target: "http://localhost:5000",
         ws: true,
+        secure: false,
       },
     },
   },
